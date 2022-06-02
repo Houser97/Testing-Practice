@@ -107,6 +107,31 @@ function ceasarCipher(string, shift) {
   return result;
 }
 
+/* ----------- Fifth exercise ------------ */
+function min(array) {
+  let minValue = Infinity;
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] < minValue) minValue = array[i];
+  }
+  return minValue;
+}
+
+function max(array) {
+  let maxValue = -Infinity;
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] > maxValue) maxValue = array[i];
+  }
+  return maxValue;
+}
+
+function analyzeArray(array) {
+  let averageArray = array.reduce((previousValue, nextValue) => previousValue + nextValue, 0);
+  averageArray /= array.length;
+  return {
+    average: averageArray, min: min(array), max: max(array), length: array.length,
+  };
+}
+
 module.exports = {
-  capitalize, reverseString, calculator, ceasarCipher,
+  capitalize, reverseString, calculator, ceasarCipher, analyzeArray,
 };

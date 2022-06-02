@@ -79,3 +79,22 @@ test("ceasarCipher check a  letter to reset", () => {
 test("ceasarCipher check punctuation", () => {
   expect(index.ceasarCipher("HouSer, is; cooL", 1)).toBe("IpvTfs, jt; dppM");
 });
+
+/* Fifth exercise */
+test("Check [1,2,3]", () => {
+  expect(index.analyzeArray([1, 2, 3])).toStrictEqual({
+    average: 2,
+    min: 1,
+    max: 3,
+    length: 3,
+  });
+});
+
+test("Check [4,5,6,7]", () => {
+  expect(index.analyzeArray([4, 5, 6, 7])).toStrictEqual({
+    average: 5.5,
+    min: 4,
+    max: 7,
+    length: 4,
+  });
+});
